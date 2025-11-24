@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
-const iemRoutes = require("./routes/iems");
+const iemRoutes = require("./routes/iems.js");
 require("dotenv").config(); 
 
 const app = express();
