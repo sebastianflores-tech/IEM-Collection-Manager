@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New IEM</title>
+</head>
+<body>
+    <h1>Add a New IEM</h1>
+
+    <form action="/iems" method="POST">
+        <label>Brand:</label>
+        <input type="text" name="brand" required>
+
+        <br><br>
+
+        <label>Model:</label>
+        <input type="text" name="model" required>
+
+        <br><br>
+
+        <label>Sound Signature:</label>
+        <input type="text" name="soundSignature" required>
+
+        <br><br>
+
+        <label>Rating:</label>
+        <input type="number" name="rating" min="1" max="10" required>
+
+        <br><br>
+
+        <button type="submit">Create IEM</button>
+    </form>
+
+</body>
+</html>

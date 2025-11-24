@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
+const iemRoutes = require("./routes/iems");
 require("dotenv").config(); 
 
 const app = express();
@@ -18,6 +19,8 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/iems", iemRoutes);
+
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", function (req, res) {
@@ -26,5 +29,5 @@ app.get("/", function (req, res) {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, function () {
-    console.log("Server running on port " + PORT);
+    console.log("Server running at http://localhost:" + PORT);
 });

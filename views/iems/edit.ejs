@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit IEM</title>
+</head>
+<body>
+    <h1>Edit IEM</h1>
+
+    <form action="/iems/<%= iem._id %>" method="POST">
+        Brand: <input type="text" name="brand" value="<%= iem.brand %>"><br>
+        Model: <input type="text" name="model" value="<%= iem.model %>"><br>
+        Sound Signature: <input type="text" name="soundSignature" value="<%= iem.soundSignature %>"><br>
+        Rating: <input type="number" name="rating" value="<%= iem.rating %>"><br>
+        <button type="submit">Update</button>
+    </form>
+
+    <p><a href="/iems">Back to list</a></p>
+</body>
+</html>

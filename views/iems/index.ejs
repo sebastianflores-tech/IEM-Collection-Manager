@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IEM List</title>
+</head>
+<body>
+   <h1>All IEMs</h1>
+
+<% if (iems.length === 0) { %>
+    <p>No IEMs in the database yet.</p>
+<% } else { %>
+    <ul>
+        <% iems.forEach(function(iem) { %>
+            <li>
+                <%= iem.brand %> - <%= iem.model %>
+
+                <a href="/iems/<%= iem._id %>/edit">Edit</a>
+
+                <form action="/iems/<%= iem._id %>/delete" method="POST" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+<% } %>
+
+</body>
+</html>
