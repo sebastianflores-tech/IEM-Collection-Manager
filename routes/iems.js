@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Iem = require("../models/iem");
+const Iem = require("../models/iem.js");
 
 // READ
 router.get("/", function (req, res) {
