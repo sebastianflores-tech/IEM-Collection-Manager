@@ -5,6 +5,8 @@
     <title>Edit IEM</title>
 </head>
 <body>
+    <%- include('../partials/header') %>
+
     <h1>Edit IEM</h1>
 
     <form action="/iems/<%= iem._id %>" method="POST">
@@ -16,5 +18,7 @@
     </form>
 
     <p><a href="/iems">Back to list</a></p>
+
+    <%- include('../partials/footer') %>
 </body>
 </html>

@@ -5,7 +5,26 @@
     <title>IEM Collection Manager</title>
 </head>
 <body>
+    <%- include('partials/header') %>
+
     <h1>Welcome to your IEM Collection Manager</h1>
-    <p>test</p>
+
+    <p>This web application allows you to manage your collection of IEMs (In-Ear Monitors).</p>
+
+    <p>
+        Use the navigation menu above to:
+    </p>
+    <ul>
+        <li>View all IEMs</li>
+        <li>Add a new IEM to your collection</li>
+        <li>Edit existing IEM details</li>
+        <li>Delete IEMs from the collection</li>
+    </ul>
+
+    <p>
+        <a href="/iems">Go to IEM List</a>
+    </p>
+
+   <%- include('partials/footer') %>
 </body>
 </html>

@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #d0e4ff; 
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+
+header, .navbar {
+    background-color: #e6f1ff;
+    padding: 15px;
+    border-bottom: 2px solid #b3d4ff;
+}
+
+header h1, .navbar-brand {
+    color: #0056b3;
+    margin: 0;
+}
+
+.navbar a {
+    color: #0056b3;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.navbar a:hover {
+    color: #003f88; 
+    text-decoration: underline;
+}
+
+h1, h2 {
+    color: #003f88;
+}
+
+a {
+    color: #0077dd;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 6px 0;
+    border-bottom: 1px solid #e8f1ff;
+}
+
+button,
+input[type="submit"] {
+    background-color: #007bff; 
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #0064d6;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 8px;
+    margin-bottom: 12px;
+    width: 280px;
+    max-width: 100%;
+    border: 1px solid #b3d4ff;
+    border-radius: 4px;
+    background-color: #f8fbff;
+}
+
+label {
+    color: #003f88;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+    padding: 10px 0;
+    margin-top: 30px;
+    border-top: 1px solid #d0e4ff;
+    background-color: #f5f9ff;
+}
