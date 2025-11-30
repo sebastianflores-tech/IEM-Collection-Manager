@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const Iem = require("../models/iem.js");
+const { ensureAuthenticated } = require("../middleware/auth");
+
 
 // READ
 router.get("/", function (req, res) {
@@ -15,12 +17,12 @@ router.get("/", function (req, res) {
 });
 
 // NEW
-router.get("/new", function (req, res) {
+router.get("/new", ensureAuthenticated, function (req, res) {
     res.render("iems/new");
 });
 
 // CREATE
-router.post("/", function (req, res) {
+router.post("/", ensureAuthenticated, async function (req, res) {
     Iem.create({
         brand: req.body.brand,
         model: req.body.model,
@@ -37,7 +39,7 @@ router.post("/", function (req, res) {
 });
 
 // EDIT
-router.get("/:id/edit", function (req, res) {
+router.get("/:id/edit", ensureAuthenticated, async function (req, res) {
     Iem.findById(req.params.id)
         .then(function (iem) {
             res.render("iems/edit", { iem: iem });
@@ -50,7 +52,7 @@ router.get("/:id/edit", function (req, res) {
 
 
 // UPDATE
-router.post("/:id", function (req, res) {
+router.post("/:id", ensureAuthenticated, async function (req, res) {
     Iem.findByIdAndUpdate(req.params.id, {
         brand: req.body.brand,
         model: req.body.model,
@@ -67,7 +69,7 @@ router.post("/:id", function (req, res) {
 });
 
 // DELETE
-router.post("/:id/delete", function (req, res) {
+router.post("/:id/delete", ensureAuthenticated, async function (req, res) {
     Iem.findByIdAndDelete(req.params.id)
         .then(function () {
             res.redirect("/iems");
